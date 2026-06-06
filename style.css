@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f7fa;
+    min-height: 100vh;
+    padding-top: 75px;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: #2C5EAD;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo */
+
+.logo img {
+    height: 42px;
+    display: block;
+}
+
+/* Hamburger */
+.hamburger {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger span {
+    position: absolute;
+    left: 50%;
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 999px;
+    transition: .3s ease;
+    transform: translateX(-50%);
+}
+
+.hamburger span:nth-child(1) {
+    top: 11px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 19px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 27px;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 19px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 19px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    z-index: 999;
+    width: 65%;
+    max-width: 320px;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 24px;
+    background: #fff;
+    transition: .4s cubic-bezier(.4,0,.2,1);
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu a {
+    width: 100%;
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 22px 0;
+    border-bottom: 1px solid #f1f1f1;
+    transition: .25s ease;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.side-menu a:hover {
+    padding-left: 12px;
+}
+
+.hero {
+    padding: 80px 20px 10px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: black;
+    margin-bottom: 20px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6b7280;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: #2C5EAD;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: .3s;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.btn-wa:hover {
+    opacity: .9;
+    transform: translateY(-2px);
+}
+
+.btn-wa i {
+    font-size: 18px;
+}
+
+.hero-image {
+    padding: 0 20px;
+    margin-top: 5px;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.features {
+    padding: 40px 20px;
+}
+
+.features h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #2C5EAD;
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background: #111827;
+    border-radius: 999px;
+    margin: 0 auto 35px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-card {
+    display: flex;
+    gap: 16px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.check {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2C5EAD;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 6px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.7;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.produk {
+    padding: 20px 20px;
+}
+
+/* Kategori */
+
+.kategori {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.kategori button {
+    padding: 10px 14px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .2s;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.kategori button.active {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+/* Paket container */
+
+.paket-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Card paket */
+
+.paket {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 2px solid #2C5EAD;
+}
+
+/* Harga */
+
+.harga {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0 15px;
+    color: red;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+/* List fitur */
+
+.paket ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.paket ul li {
+    margin-bottom: 10px;
+    color: #374151;
+    font-size: 14px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+/* Button */
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background: #2C5EAD;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+.produk h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #2C5EAD;
+}
+
+.paket h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.naik-harga {
+    font-size: 15px;
+    color: #9ca3af;
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.fitur-include {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.fitur-include h4 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #2C5EAD;
+    margin-bottom: 10px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.line-small {
+    width: 60px;
+    height: 3px;
+    background: black;
+    margin: 0 auto 20px;
+    border-radius: 999px;
+}
+
+.fitur-box {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.fitur-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fitur-box li {
+    font-size: 15px;
+    color: #374151;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.fitur-box li:last-child {
+    border-bottom: none;
+}
+
+.faq {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #2C5EAD;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 16px 18px;
+    background: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #111827;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 18px;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 18px 16px;
+    max-height: 200px;
+}
+
+.arrow {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+    color: #6b7280;
+    position: relative;
+    top: -1px;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.footer {
+    background: linear-gradient(180deg, #2C5EAD 0%, #24519a 100%);
+    color: #fff;
+    padding: 50px 20px 20px;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.footer-sosmed {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.footer-sosmed a {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.footer-sosmed a:hover {
+    background: #fff;
+    color: #2C5EAD;
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Poppins', Sans-Serif;
+}
+
+/* =========================
+   ANIMASI WEBSITE
+========================= */
+
+.hero,
+.hero-image,
+.features,
+.produk,
+.fitur-include,
+.faq,
+.feature-card,
+.faq-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Delay berurutan */
+
+.feature-card:nth-child(3) {
+    transition-delay: .1s;
+}
+
+.feature-card:nth-child(4) {
+    transition-delay: .2s;
+}
+
+.feature-card:nth-child(5) {
+    transition-delay: .3s;
+}
+
+.feature-card:nth-child(6) {
+    transition-delay: .4s;
+}
+
+.paket:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.paket:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.paket:nth-child(3) {
+    transition-delay: .3s;
+}
+
+/* Hover Card */
+
+.feature-card,
+.paket,
+.faq-item,
+.fitur-box {
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        opacity .8s ease;
+}
+
+.feature-card:hover,
+.paket:hover,
+.faq-item:hover,
+.fitur-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+/* Tombol */
+
+.btn,
+.btn-wa,
+.kategori button,
+.footer-sosmed a {
+    transition: all .3s ease;
+}
+
+.btn:hover,
+.btn-wa:hover {
+    transform: translateY(-3px);
+}
+
+.kategori button:hover {
+    transform: translateY(-2px);
+}
+
+.footer-sosmed a:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Logo Footer */
+
+.footer-logo img {
+    transition: transform .4s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+}
