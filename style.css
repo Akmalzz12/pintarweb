@@ -352,6 +352,7 @@ body {
     border-radius: 12px;
     font-weight: 600;
     transition: .2s;
+    font-family: 'Poppins', Sans-Serif;
 }
 
 .btn:hover {
@@ -365,6 +366,7 @@ body {
     margin-top: 10px;
     margin-bottom: 40px;
     color: #2C5EAD;
+    font-family: 'Poppins', Sans-Serif;
 }
 
 .paket h3 {
