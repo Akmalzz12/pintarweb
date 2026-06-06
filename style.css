@@ -140,7 +140,7 @@ body {
 }
 
 .hero {
-    padding: 80px 20px 10px;
+    padding: 80px 20px 20px;
 }
 
 .hero h1 {
@@ -320,24 +320,30 @@ body {
 .harga {
     font-size: 32px;
     font-weight: 700;
-    margin: 10px 0 15px;
+    margin: 6px 0 15px;
     color: red;
     font-family: 'Poppins', Sans-Serif;
+    text-align: center;
 }
 
 /* List fitur */
 
-.paket ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
-}
-
 .paket ul li {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
     color: #374151;
     font-size: 14px;
     font-family: 'Poppins', Sans-Serif;
+}
+
+.paket ul li i {
+    width: 20px;
+    color: #2C5EAD;
+    font-size: 16px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 /* Button */
@@ -352,7 +358,7 @@ body {
     border-radius: 12px;
     font-weight: 600;
     transition: .2s;
-    font-family: 'Poppins', Sans-Serif;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -366,21 +372,22 @@ body {
     margin-top: 10px;
     margin-bottom: 40px;
     color: #2C5EAD;
-    font-family: 'Poppins', Sans-Serif;
 }
 
 .paket h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     font-family: 'Poppins', Sans-Serif;
+    text-align: center;
 }
 
 .naik-harga {
     font-size: 15px;
     color: #9ca3af;
-    margin-top: -8px;
+    margin-top: -10px;
     margin-bottom: 16px;
     font-family: 'Poppins', Sans-Serif;
+    text-align: center;
 }
 
 .fitur-include {
@@ -415,22 +422,23 @@ body {
     text-align: left;
 }
 
-.fitur-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 .fitur-box li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 15px;
     color: #374151;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #f1f1f1;
     font-family: 'Poppins', Sans-Serif;
 }
 
-.fitur-box li:last-child {
-    border-bottom: none;
+.fitur-box li i {
+    width: 22px;
+    color: #2C5EAD;
+    font-size: 17px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .faq {
@@ -702,4 +710,57 @@ body {
 
 .footer-logo img:hover {
     transform: scale(1.05);
+}
+
+.floating-wa {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.floating-wa:hover {
+    transform: scale(1.1);
+}
+
+.floating-wa::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.4);
+    animation: wa-pulse 2s infinite;
+}
+
+@keyframes wa-pulse {
+    0% {
+        transform: scale(1);
+        opacity: .7;
+    }
+    70% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.floating-wa i {
+    position: relative;
+    z-index: 2;
 }
