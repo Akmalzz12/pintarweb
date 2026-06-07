@@ -757,3 +757,46 @@ body {
     position: relative;
     z-index: 2;
 }
+
+.cta-section {
+    text-align: center;
+    padding: 20px 20px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-label {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #2C5EAD;
+    margin-bottom: 20px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.cta-section p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #6b7280;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 28px;
+    background: #2C5EAD;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', Sans-Serif;
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+}
