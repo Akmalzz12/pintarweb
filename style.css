@@ -291,9 +291,8 @@ body {
 }
 
 .kategori button.active {
-    background: #111827;
+    background: #2C5EAD;
     color: #fff;
-    border-color: #111827;
 }
 
 /* Paket container */
