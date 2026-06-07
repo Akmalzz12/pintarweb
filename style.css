@@ -20,7 +20,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    background: #2C5EAD;
+    background: #178ee8;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     position: fixed;
     top: 0;
@@ -148,7 +148,7 @@ body {
     font-size: 35px;
     font-weight: 800;
     line-height: 1.1;
-    color: #2C5EAD;
+    color: #178ee8;
     margin-bottom: 20px;
     font-family: 'Poppins', Sans-Serif;
 }
@@ -167,7 +167,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 14px 24px;
-    background: #2C5EAD;
+    background: #178ee8;
     color: #fff;
     text-decoration: none;
     font-size: 15px;
@@ -205,7 +205,7 @@ body {
 .features h2 {
     font-size: 28px;
     font-weight: 800;
-    color: #2C5EAD;
+    color: #178ee8;
     margin-bottom: 16px;
     text-align: center;
     font-family: 'Poppins', Sans-Serif;
@@ -242,7 +242,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #2C5EAD;
+    background: #178ee8;
     color: #fff;
     border-radius: 50%;
     font-size: 16px;
@@ -291,7 +291,7 @@ body {
 }
 
 .kategori button.active {
-    background: #2C5EAD;
+    background: #178ee8;
     color: #fff;
 }
 
@@ -311,7 +311,7 @@ body {
     border-radius: 18px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border: 2px solid #2C5EAD;
+    border: 2px solid #178ee8;
 }
 
 /* Harga */
@@ -339,7 +339,7 @@ body {
 
 .paket ul li i {
     width: 20px;
-    color: #2C5EAD;
+    color: #178ee8;
     font-size: 16px;
     text-align: center;
     flex-shrink: 0;
@@ -351,7 +351,7 @@ body {
     display: block;
     text-align: center;
     padding: 12px;
-    background: #2C5EAD;
+    background: #178ee8;
     color: #fff;
     text-decoration: none;
     border-radius: 12px;
@@ -371,7 +371,7 @@ body {
     font-weight: 800;
     margin-top: 10px;
     margin-bottom: 40px;
-    color: #2C5EAD;
+    color: #178ee8;
     font-family: 'Poppins', Sans-Serif;
 }
 
@@ -399,7 +399,7 @@ body {
 .fitur-include h4 {
     font-size: 24px;
     font-weight: 800;
-    color: #2C5EAD;
+    color: #178ee8;
     margin-bottom: 10px;
     font-family: 'Poppins', Sans-Serif;
 }
@@ -436,7 +436,7 @@ body {
 
 .fitur-box li i {
     width: 22px;
-    color: #2C5EAD;
+    color: #178ee8;
     font-size: 17px;
     text-align: center;
     flex-shrink: 0;
@@ -453,7 +453,7 @@ body {
     font-size: 25px;
     font-weight: 800;
     margin-bottom: 30px;
-    color: #2C5EAD;
+    color: #178ee8;
     font-family: 'Poppins', Sans-Serif;
 }
 
@@ -508,7 +508,7 @@ body {
 }
 
 .footer {
-    background: linear-gradient(180deg, #2C5EAD 0%, #24519a 100%);
+    background: linear-gradient(180deg, #178ee8 0%, #178ee8 100%);
     color: #fff;
     padding: 50px 20px 20px;
     margin-top: 20px;
@@ -558,7 +558,7 @@ body {
 
 .footer-sosmed a:hover {
     background: #fff;
-    color: #2C5EAD;
+    color: #178ee8;
     border-color: #fff;
     transform: translateY(-3px);
 }
@@ -770,7 +770,7 @@ body {
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 0;
-    color: #2C5EAD;
+    color: #178ee8;
     margin-bottom: 20px;
     font-family: 'Poppins', Sans-Serif;
 }
@@ -788,7 +788,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 15px 28px;
-    background: #2C5EAD;
+    background: #178ee8;
     color: #fff;
     text-decoration: none;
     border-radius: 12px;
