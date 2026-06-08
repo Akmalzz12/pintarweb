@@ -205,6 +205,7 @@ body {
 .features h2 {
     font-size: 28px;
     font-weight: 800;
+    line-height: 1.2;
     color: #178ee8;
     margin-bottom: 16px;
     text-align: center;
@@ -369,6 +370,7 @@ body {
     text-align: center;
     font-size: 30px;
     font-weight: 800;
+    line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 40px;
     color: #178ee8;
@@ -399,6 +401,7 @@ body {
 .fitur-include h4 {
     font-size: 24px;
     font-weight: 800;
+    line-height: 1.2;
     color: #178ee8;
     margin-bottom: 10px;
     font-family: 'Poppins', Sans-Serif;
@@ -452,6 +455,7 @@ body {
     text-align: center;
     font-size: 25px;
     font-weight: 800;
+    line-height: 1.2;
     margin-bottom: 30px;
     color: #178ee8;
     font-family: 'Poppins', Sans-Serif;
